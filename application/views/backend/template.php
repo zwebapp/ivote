@@ -11,10 +11,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <?php $this->load->view('backend/_includes/head.php'); ?>
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/main.css">
+
+    <script src="<?php echo base_url(); ?>public/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
 
   <body>
@@ -22,20 +25,23 @@
   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
   <![endif]-->
 
-    <div class="container"> 
-      
+    <div class="container-fluid"> 
       <header>
-        <div>
-          <p>header here </p>
-        </div>
         <?php $this->load->view('backend/_includes/nav.php'); ?>  
+        <?php $this->load->view('backend/_includes/header.php'); ?>  
       </header> 
-
       <?php $this->load->view('backend/pages/' . $main_content); ?>
 
     </div>
 
     <?php $this->load->view('backend/_includes/footer.php'); ?>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>public/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+    <script src="<?php echo base_url(); ?>public/js/vendor/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>public/js/plugins.js"></script>
+    <script src="<?php echo base_url(); ?>public/js/main.js"></script>
 
   </body>
 </html>
