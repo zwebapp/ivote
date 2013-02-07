@@ -26,10 +26,12 @@
   <![endif]-->
 
     <div class="container-fluid"> 
+
       <header>
         <?php $this->load->view('backend/_includes/nav.php'); ?>  
         <?php $this->load->view('backend/_includes/header.php'); ?>  
       </header> 
+      
       <?php $this->load->view('backend/pages/' . $main_content); ?>
 
     </div>
